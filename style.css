@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 230px;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  margin: 30px;
+}
+
+.text {
+  float: left;
+}
+
+.text .price {
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.text .price .count {
+  margin-left: 5px;
+}
+
+.icon {
+  float: right;
+}
+
+.icon i {
+  font-size: 4em;
+}
+
+.color1 {
+  background: #02ac94;
+}
+
+.color2 {
+  background: #019cf2;
+}
+
+.color3 {
+  background: #ff7b47;
+}
