@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card color1">
+        <div class="text">
+          <div class="price">
+            <span>$</span>
+            <div class="count" data-max="20000">0</div>
+          </div>
+          <span>Revenue</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+      </div>
+      <div class="card color2">
+        <div class="text">
+          <div class="price">
+            <span>$</span>
+            <div class="count" data-max="345">0</div>
+          </div>
+          <span>Clients</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-user-friends"></i>
+        </div>
+      </div>
+      <div class="card color3">
+        <div class="text">
+          <div class="price">
+            <span>$</span>
+            <div class="count" data-max="4365">0</div>
+          </div>
+          <span>Templates</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-table"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const counts = document.querySelectorAll(".count");
+
+    counts.forEach((count) => {
+      const updateCount = () => {
+        const max = +count.getAttribute("data-max");
+        const cur = +count.innerText;
+
+        const increment = parseInt(max / 300);
+
+        if (cur < max) {
+          count.innerText = cur + increment;
+          setTimeout(updateCount, 1);
+        } else {
+          count.innerText = max;
+        }
+      };
+
+      updateCount();
+    });
+  </script>
+</html>
